@@ -79,7 +79,10 @@ SICAP was developed to migrate and enhance the estimating module. Key processes 
 Internal project — suggestions can be shared with the project lead or development team.
 
 ## 🪪 License
-Internal use only. Not for public distribution.
+⚠️ License Notice  
+This repository was originally published under the MIT License.  
+As of April 22, 2025, the license has been changed to **CC BY-NC-ND 4.0**.  
+See the LICENSE file for details.
 
 ## 🔗 Additional Resources
 - **Related Systems:** Integrated with SAP and internal contract management tools
