@@ -5,16 +5,16 @@
 
 Originally tasked with migrating a legacy Visual FoxPro estimation system, I led the modernization into a full-stack, data-driven application—covering everything from UI/UX to database design, user authentication, SAP data import, and reporting.
 
-### Updates screen
+### Login Screen
 ![Screenshot](./assets/8.png) <!-- Replace with your image path -->
 
-### Updates screen
+### Home page
 ![Screenshot](./assets/7.png) <!-- Replace with your image path -->
 
-### Updates screen
+### Collect estimation
 ![Screenshot](./assets/3.png) <!-- Replace with your image path -->
 
-### Updates screen
+### Manual cover
 ![Screenshot](./assets/9.png) <!-- Replace with your image path -->
 
 ## 💡 Idea & Concept
