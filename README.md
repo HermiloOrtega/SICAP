@@ -5,6 +5,18 @@
 
 Originally tasked with migrating a legacy Visual FoxPro estimation system, I led the modernization into a full-stack, data-driven application—covering everything from UI/UX to database design, user authentication, SAP data import, and reporting.
 
+### Updates screen
+![Screenshot](./assets/8.png) <!-- Replace with your image path -->
+
+### Updates screen
+![Screenshot](./assets/7.png) <!-- Replace with your image path -->
+
+### Updates screen
+![Screenshot](./assets/3.png) <!-- Replace with your image path -->
+
+### Updates screen
+![Screenshot](./assets/9.png) <!-- Replace with your image path -->
+
 ## 💡 Idea & Concept
 SICAP was created to modernize and streamline the company’s entire estimation and contract tracking workflow. The legacy process was error-prone and inflexible. My goals were:
 - Automate data import from SAP (TXT files with complex validation rules).
