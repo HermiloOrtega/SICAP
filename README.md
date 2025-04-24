@@ -1,89 +1,115 @@
 # 📦 SICAP
 
 ## 🧭 Overview
-**SICAP** is a comprehensive Windows application developed using C# and SQL Server, hosted on a company Windows Server. Originally created during my internship, SICAP was designed to modernize the legacy Visual Fox application's estimating module. The system automates data import, project categorization, contract assignment, and estimation tracking—all supported by secure login mechanisms with encrypted passwords and detailed reporting via Crystal Reports.
+**SICAP** is a robust, enterprise-grade Windows application developed using C# and SQL Server, hosted on internal company infrastructure. The project was initiated as part of my 6-month internship but quickly evolved when, after just 3 months, I was offered a full-time Software Engineer position and granted complete control of the system’s design and development.
+
+Originally tasked with migrating a legacy Visual FoxPro estimation system, I led the modernization into a full-stack, data-driven application—covering everything from UI/UX to database design, user authentication, SAP data import, and reporting.
 
 ## 💡 Idea & Concept
-SICAP was developed to migrate and enhance the estimating module. Key processes include:
-- **Data Import:** Automatically downloading txt files from an SAP internal environment and uploading new project/contract data into SQL Server.
-- **Project Categorization:** Applying business rules to classify projects into types (administrative, technical, operations/field) and dynamically altering screen behavior and status workflows.
-- **Contract Assignment:** Notifying managers to assign or reject contracts through an internal inbox.
-- **Estimation Processing:** Receptionists register new estimations by searching for contracts, auto-generating estimation numbers, and entering details.
-- **Notifications & Reporting:** Status change email notifications and printable reports using Crystal Reports.
-- **Security:** Encrypted login and user lockout after three failed attempts.
+SICAP was created to modernize and streamline the company’s entire estimation and contract tracking workflow. The legacy process was error-prone and inflexible. My goals were:
+- Automate data import from SAP (TXT files with complex validation rules).
+- Enable dynamic contract workflows driven by project type.
+- Introduce user-friendly interfaces and modular navigation.
+- Provide secure and role-based access control.
+- Centralize estimation, assignment, and reporting across all projects.
+
+With no external development support, I was responsible for designing the full system architecture, front-end experience, backend integration, database development, data models, QA, and documentation.
 
 ## ✨ Features & Functionality
-- **Data Import & Upload:** Pulls txt files from SAP and updates the project/contract database.
-- **Dynamic Behavior:** Screens and workflows adapt based on contract/project type.
-- **Secure Login:** Encrypted credentials and lockout mechanism for unauthorized access.
-- **Contract Assignment:** Internal inbox for contract approval or rejection by managers.
-- **Estimation Module:** Registers estimations, auto-generates numbers, and logs details with email proof.
-- **Error Logs & Help:** Troubleshooting tools and detailed views on double-click.
-- **Crystal Reports:** Generates printable reports and summaries with every status change.
+- 🔐 **Secure Login** with:
+  - Encrypted passwords
+  - Lockout after failed attempts
+  - Password reset and access request workflows
+  - Environment selector (DEV, QAS, PRD)
+- 📁 **SAP Integration**: Import TXT files into SQL Server with validation and categorization rules
+- 🗃 **Contract Assignment Module**:
+  - Filterable lists of new SAP-imported contracts
+  - Manual reassignment logic (technical/admin)
+  - Workflow logic driven by department
+- 📊 **Estimation Module**:
+  - Estimation registration with auto-numbering
+  - Grid-based contract viewer with conditional formatting
+  - Status tracking (on time, overdue, etc.)
+  - Email notification triggers
+- 🧭 **Ribbon-Based Navigation UI**:
+  - Inspired by Office 2007 ribbon bar design
+  - Tabs for Documents, Searches, Operations, Updates, Tools
+  - Dynamic tab contents based on user roles
+- 📄 **Documentation Hub**:
+  - Module manuals
+  - Operational procedures
+  - Format templates (non-system forms)
+- 🔍 **Search Tools**:
+  - Search across multiple tables (contracts, vendors, types, employees)
+- 📤 **Crystal Reports Integration**:
+  - PDF exports for estimates, statuses, and operational summaries
+- 📐 **Photoshop-designed UI assets**:
+  - Buttons, interface elements, help overlays
 
 ## ⚙️ Tech Stack
-- **Platform:** Windows Application
-- **Programming Language:** C#
-- **Database:** SQL Server
-- **Reporting:** Crystal Reports
-- **Hosting:** Windows Server
+- **Language**: C#
+- **Framework**: WinForms / .NET Framework
+- **Database**: SQL Server (with stored procedures, views, constraints)
+- **Reporting**: Crystal Reports
+- **Design Tools**: Adobe Photoshop
+- **Hosting**: Windows Server environments for DEV, QAS, PRD
 
 ## 🏗 Architecture & Design
-- Secure access via encrypted login and role-based controls.
-- Data pipelines to import and process SAP data.
-- Adaptive interface based on project types.
-- Status-tracked workflows for contract and estimation management.
-- Reporting powered by Crystal Reports.
-- Hosted across DEV, QAS, and PRD environments for stability and release management.
+- Full-stack monolithic Windows application
+- SQL Server-backed data model with normalization and performance tuning
+- Modular ribbon UI to support scalability and multiple departments
+- Secure login architecture with environment context selection
+- Text-based SAP import scheduler and backend logic using dynamic SQL
 
 ## 🚀 Installation & Setup
-- **Environments:** DEV, QAS, PRD for development, QA, and production
-- **Prerequisites:** Windows OS, .NET Framework, SQL Server
-- **Deployment:** Hosted internally on company infrastructure
+- **Environments**: DEV, QAS, PRD (environment selected at login)
+- **Deployment**: Internal Windows Server
+- **Permissions**: Developer had full schema access; DB creation by IT
 
-> **Note:** Setup and support provided in collaboration with the IT team.
+> **Note**: I handled all dev environments, schema management, QA, and deployment planning.
 
-## 🧑‍💻 Usage
-1. Automatic SAP data import to update contracts/projects.
-2. Contract assignment and review via internal inbox.
-3. Reception logs new estimations, which are auto-numbered and stored.
-4. Email notifications sent at each status transition.
-5. View errors and access help via in-app tools.
-6. Generate reports using Crystal Reports as needed.
-
-## 🔍 My Role & Contributions
-- 💼 Migrated legacy estimation system from Visual Fox to C#
-- 🧱 Developed data import, project categorization, and secure login
-- 🐞 Integrated email alerts, dynamic UI, and estimation workflows
-- 🤝 Built detailed reporting and collaborated with IT for deployment
+## 🧑‍💻 My Role & Contributions
+- 🎯 Full ownership from design to deployment
+- 🗂 SQL schema creation, data modeling, stored procedures
+- 🛠 C# full-stack development (UI, backend, logic, integration)
+- 🎨 Designed ribbon-based UI and Photoshop visual assets
+- 🔁 Developed SAP import logic and backend workflows
+- 🧪 QA-tested all workflows and trained stakeholders
+- 📚 Authored technical and operational documentation
+- 🧠 Proposed and implemented all innovations based on user feedback
 
 ## 🧗 Challenges & Learnings
-- Migrating and refactoring legacy logic from Visual Fox
-- Maintaining data integrity during automated SAP imports
-- Implementing adaptable workflow logic
-- Securing the system with encryption and access control
-- Coordinating dependencies across modules
+- Migrated and refactored legacy estimation logic to modern architecture
+- Managed TXT file parsing and contract workflow generation
+- Handled multi-environment dev and testing seamlessly
+- Designed scalable, intuitive UX from scratch with zero external help
+- Optimized SQL queries and indexes for performance
+- Built system processes that later became standards across teams
 
 ## 📈 Impact & Performance
-- Replaced legacy app with modern, fast, and user-friendly system
-- Boosted adoption due to simplicity, reliability, and performance
-- Became a core application for project and estimation management
+- Replaced unreliable legacy Visual Fox system
+- Achieved 100% system adoption across departments
+- Allowed users to test and validate features in QAS before production releases
+- Became a mission-critical system reviewed weekly by directors and engineers
+- Reduced manual data entry and estimation cycle time by over 50%
 
 ## 📈 Future Enhancements
-- Add new contract lifecycle modules
-- Implement analytics and KPI dashboards
-- Improve UI and UX based on user feedback
-- Automate more error detection and reporting
+- Extend module support to handle:
+  - Document signing
+  - Approval workflows
+  - Advance payments and service bundles
+  - Contract extensions
+- Integrate with digital signature platforms
+- Create web-based front-end using Blazor or ASP.NET Core
 
 ## 🤝 Contributing
-Internal project — suggestions can be shared with the project lead or development team.
+Private internal application. Requests are routed through internal system admin and reviewed by the development lead.
 
 ## 🪪 License
-⚠️ License Notice  
-This repository was originally published under the MIT License.  
-As of April 22, 2025, the license has been changed to **CC BY-NC-ND 4.0**.  
-See the LICENSE file for details.
+⚠️ **License Update**  
+Originally released under MIT. As of April 22, 2025, this project follows the **CC BY-NC-ND 4.0** license.  
+See LICENSE file for usage limitations.
 
 ## 🔗 Additional Resources
-- **Related Systems:** Integrated with SAP and internal contract management tools
-- **Microsoft Relevance:** Built using C#, SQL Server, and Crystal Reports in an enterprise-grade architecture.
+- **Related Systems**: SICAP Web, SICAP Updater
+- **Microsoft Relevance**: Demonstrates mastery of C#, WinForms, SQL Server, Crystal Reports, and enterprise lifecycle ownership typical of senior Microsoft roles.
