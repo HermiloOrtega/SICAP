@@ -1,127 +1,102 @@
+
 # 📦 SICAP
 
 ## 🧭 Overview
-**SICAP** is a robust, enterprise-grade Windows application developed using C# and SQL Server, hosted on internal company infrastructure. The project was initiated as part of my 6-month internship but quickly evolved when, after just 3 months, I was offered a full-time Software Engineer position and granted complete control of the system’s design and development.
-
-Originally tasked with migrating a legacy Visual FoxPro estimation system, I led the modernization into a full-stack, data-driven application—covering everything from UI/UX to database design, user authentication, SAP data import, and reporting.
-
-### Login Screen
-![Screenshot](./assets/8.png) <!-- Replace with your image path -->
-
-### Home page
-![Screenshot](./assets/7.png) <!-- Replace with your image path -->
-
-### Collect estimation
-![Screenshot](./assets/3.png) <!-- Replace with your image path -->
-
-### Manual cover
-![Screenshot](./assets/9.png) <!-- Replace with your image path -->
+**SICAP** is a comprehensive Windows-based enterprise application developed using **C#** and **SQL Server**, hosted on internal company Windows Servers. Originally created to modernize a legacy Visual FoxPro application, it supports project estimation, contract tracking, assignment workflows, and KPIs for multiple engineering departments at AHMSA.  
+It serves as a core system for project managers, directors, and engineers, supporting administrative, technical, and field workflows with role-based access control.
 
 ## 💡 Idea & Concept
-SICAP was created to modernize and streamline the company’s entire estimation and contract tracking workflow. The legacy process was error-prone and inflexible. My goals were:
-- Automate data import from SAP (TXT files with complex validation rules).
-- Enable dynamic contract workflows driven by project type.
-- Introduce user-friendly interfaces and modular navigation.
-- Provide secure and role-based access control.
-- Centralize estimation, assignment, and reporting across all projects.
+The system replaced an outdated manual and legacy solution with a fully integrated software product. Inspired by the need for scalable workflow automation, SICAP was designed to:
+- Import and categorize data from SAP (via TXT files)
+- Automate contract lifecycle workflows
+- Provide visual and dynamic contract performance insights
+- Enforce secure authentication and session control
+- Enable continuous data sharing across internal tools like **[SICAP Indicators](#https://github.com/HermiloOrtega/SICAP-Indicators)**, **[SICAP Web](#https://github.com/HermiloOrtega/SICAP-Web)**, **[SICAP Updater](#https://github.com/HermiloOrtega/SICAP-Web-Updates)**, **[SICAP Foliador](#https://github.com/HermiloOrtega/SICAP-Folio-Manager)**
 
-With no external development support, I was responsible for designing the full system architecture, front-end experience, backend integration, database development, data models, QA, and documentation.
+### Login Screen
+![Screenshot](./assets/8.png)
+
+### Home page
+![Screenshot](./assets/7.png)
+
+### Collect estimation
+![Screenshot](./assets/3.png)
+
+### Manual cover
+![Screenshot](./assets/9.png)
 
 ## ✨ Features & Functionality
-- 🔐 **Secure Login** with:
-  - Encrypted passwords
-  - Lockout after failed attempts
-  - Password reset and access request workflows
-  - Environment selector (DEV, QAS, PRD)
-- 📁 **SAP Integration**: Import TXT files into SQL Server with validation and categorization rules
-- 🗃 **Contract Assignment Module**:
-  - Filterable lists of new SAP-imported contracts
-  - Manual reassignment logic (technical/admin)
-  - Workflow logic driven by department
-- 📊 **Estimation Module**:
-  - Estimation registration with auto-numbering
-  - Grid-based contract viewer with conditional formatting
-  - Status tracking (on time, overdue, etc.)
-  - Email notification triggers
-- 🧭 **Ribbon-Based Navigation UI**:
-  - Inspired by Office 2007 ribbon bar design
-  - Tabs for Documents, Searches, Operations, Updates, Tools
-  - Dynamic tab contents based on user roles
-- 📄 **Documentation Hub**:
-  - Module manuals
-  - Operational procedures
-  - Format templates (non-system forms)
-- 🔍 **Search Tools**:
-  - Search across multiple tables (contracts, vendors, types, employees)
-- 📤 **Crystal Reports Integration**:
-  - PDF exports for estimates, statuses, and operational summaries
-- 📐 **Photoshop-designed UI assets**:
-  - Buttons, interface elements, help overlays
+- 🔐 Encrypted login, session tracking, auto sign-out, and environment selector (DEV/QAS/PRD)
+- 📊 KPI dashboards and dynamic tables with contract status & SLA alerts
+- 🔄 SAP TXT import to SQL Server with business rule processing
+- 📥 Contract assignment via internal inbox module
+- 🧾 Estimation and payment processing with auto-numbering and audit trail
+- 📧 Notifications per workflow event, using email and alert modals
+- 🧩 Modular design with screen embedding and RibbonBar interface
+- 🛠 Admin-only tools to:
+  - Broadcast update messages to users
+  - Disable modules in case of bugs
+  - Track system version & access logs
+- 📈 Usage tracking for every user interaction and module
+- 🧾 Session log (start/end times, fallback time calculation if crash occurs)
 
 ## ⚙️ Tech Stack
-- **Language**: C#
-- **Framework**: WinForms / .NET Framework
-- **Database**: SQL Server (with stored procedures, views, constraints)
-- **Reporting**: Crystal Reports
-- **Design Tools**: Adobe Photoshop
-- **Hosting**: Windows Server environments for DEV, QAS, PRD
+- **Language:** C#
+- **Framework:** .NET Framework (WinForms)
+- **Database:** SQL Server
+- **Reporting:** Crystal Reports
+- **IDE:** Visual Studio
+- **Other:** SAP integration (via TXT), Windows Scheduled Tasks
 
 ## 🏗 Architecture & Design
-- Full-stack monolithic Windows application
-- SQL Server-backed data model with normalization and performance tuning
-- Modular ribbon UI to support scalability and multiple departments
-- Secure login architecture with environment context selection
-- Text-based SAP import scheduler and backend logic using dynamic SQL
+- Monolithic Windows desktop application
+- Ribbon-style navigation with embedded screens
+- Role-based permission system with secure access control
+- Multi-environment deployment support (DEV, QAS, PRD)
+- Shared database with SICAP Indicators, SICAP Web, and SICAP Foliador
+- Hosted on AHMSA’s internal Windows Server infrastructure
 
 ## 🚀 Installation & Setup
-- **Environments**: DEV, QAS, PRD (environment selected at login)
-- **Deployment**: Internal Windows Server
-- **Permissions**: Developer had full schema access; DB creation by IT
+- **Environments:** DEV, QAS, PRD
+- **Prerequisites:** .NET Framework, SQL Server, access to SAP exports
+- **Deployment:** Internal company servers
+- **Startup:** Auto-start configuration and multiple-instance prevention
 
-> **Note**: I handled all dev environments, schema management, QA, and deployment planning.
+> **Note:** Only approved internal users can access the app with appropriate permissions.
 
-## 🧑‍💻 My Role & Contributions
-- 🎯 Full ownership from design to deployment
-- 🗂 SQL schema creation, data modeling, stored procedures
-- 🛠 C# full-stack development (UI, backend, logic, integration)
-- 🎨 Designed ribbon-based UI and Photoshop visual assets
-- 🔁 Developed SAP import logic and backend workflows
-- 🧪 QA-tested all workflows and trained stakeholders
-- 📚 Authored technical and operational documentation
-- 🧠 Proposed and implemented all innovations based on user feedback
+## 🧑‍💻 Usage
+1. Login with credentials and choose environment (DEV/QAS/PRD)
+2. Access estimation, contract, or KPI modules from the RibbonBar
+3. Use assignment workflows, inbox approvals, and status updates
+4. View reports, download exports, or receive module alerts
+
+## 🔍 My Role & Contributions
+- 💼 Lead Full-Stack Developer & System Architect
+- 🧱 Designed and implemented entire backend + frontend
+- 🗂 Designed database schema, stored procedures, and SAP parsers
+- 📩 Created notification framework, session tracking, error logging
+- 🧪 QA tested and deployed across three environments
+- 🤝 Managed feature requests, feedback loops, and design approvals with stakeholders
 
 ## 🧗 Challenges & Learnings
-- Migrated and refactored legacy estimation logic to modern architecture
-- Managed TXT file parsing and contract workflow generation
-- Handled multi-environment dev and testing seamlessly
-- Designed scalable, intuitive UX from scratch with zero external help
-- Optimized SQL queries and indexes for performance
-- Built system processes that later became standards across teams
-
-## 📈 Impact & Performance
-- Replaced unreliable legacy Visual Fox system
-- Achieved 100% system adoption across departments
-- Allowed users to test and validate features in QAS before production releases
-- Became a mission-critical system reviewed weekly by directors and engineers
-- Reduced manual data entry and estimation cycle time by over 50%
+- Migrating legacy logic while avoiding data loss
+- Handling thousands of rows from SAP with high performance
+- Designing scalable workflows and adaptable UI behavior
+- Creating a system-wide update and module lockdown process
+- Logging detailed usage telemetry for feedback and auditing
 
 ## 📈 Future Enhancements
-- Extend module support to handle:
-  - Document signing
-  - Approval workflows
-  - Advance payments and service bundles
-  - Contract extensions
-- Integrate with digital signature platforms
-- Create web-based front-end using Blazor or ASP.NET Core
-
-## 🤝 Contributing
-Private internal application. Requests are routed through internal system admin and reviewed by the development lead.
+- Migrate parts of the system to web-based modules
+- Replace Crystal Reports with modern web PDF reporting
+- Integrate approval workflows with Outlook
+- Add dashboard analytics and visual BI elements
 
 ## 🪪 License
-⚠️ **License Update**  
-Originally released under MIT. As of April 22, 2025, this project follows the **CC BY-NC-ND 4.0** license.  
-See LICENSE file for usage limitations.
+⚠️ **Internal Use Only**  
+Originally published under MIT; changed to **CC BY-NC-ND 4.0** as of April 22, 2025.
 
-## 🔗 Additional Resources
-- **Related Systems**: SICAP Web, SICAP Updater
-- **Microsoft Relevance**: Demonstrates mastery of C#, WinForms, SQL Server, Crystal Reports, and enterprise lifecycle ownership typical of senior Microsoft roles.
+## 🔗 Related Projects
+- **[SICAP Indicators](#https://github.com/HermiloOrtega/SICAP-Indicators)**
+- **[SICAP Web](#https://github.com/HermiloOrtega/SICAP-Web)**
+- **[SICAP Updater](#https://github.com/HermiloOrtega/SICAP-Web-Updates)**
+- **[SICAP Foliador](#https://github.com/HermiloOrtega/SICAP-Folio-Manager)**
