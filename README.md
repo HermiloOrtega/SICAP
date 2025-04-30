@@ -11,7 +11,7 @@ The system replaced an outdated manual and legacy solution with a fully integrat
 - Automate contract lifecycle workflows
 - Provide visual and dynamic contract performance insights
 - Enforce secure authentication and session control
-- Enable continuous data sharing across internal tools like **[SICAP Indicators](#https://github.com/HermiloOrtega/SICAP-Indicators)**, **[SICAP Web](#https://github.com/HermiloOrtega/SICAP-Web)**, **[SICAP Updater](#https://github.com/HermiloOrtega/SICAP-Web-Updates)**, **[SICAP Foliador](#https://github.com/HermiloOrtega/SICAP-Folio-Manager)**
+- Enable continuous data sharing across internal tools like **[SICAP Indicators](https://github.com/HermiloOrtega/SICAP-Indicators)**, **[SICAP Web](https://github.com/HermiloOrtega/SICAP-Web)**, **[SICAP Updater](https://github.com/HermiloOrtega/SICAP-Web-Updates)**, **[SICAP Foliador](https://github.com/HermiloOrtega/SICAP-Folio-Manager)**
 
 ### Login Screen
 ![Screenshot](./assets/8.png)
@@ -96,7 +96,7 @@ The system replaced an outdated manual and legacy solution with a fully integrat
 Originally published under MIT; changed to **CC BY-NC-ND 4.0** as of April 22, 2025.
 
 ## 🔗 Related Projects
-- **[SICAP Indicators](#https://github.com/HermiloOrtega/SICAP-Indicators)**
-- **[SICAP Web](#https://github.com/HermiloOrtega/SICAP-Web)**
-- **[SICAP Updater](#https://github.com/HermiloOrtega/SICAP-Web-Updates)**
-- **[SICAP Foliador](#https://github.com/HermiloOrtega/SICAP-Folio-Manager)**
+- **[SICAP Indicators](https://github.com/HermiloOrtega/SICAP-Indicators)**
+- **[SICAP Web](https://github.com/HermiloOrtega/SICAP-Web)**
+- **[SICAP Updater](https://github.com/HermiloOrtega/SICAP-Web-Updates)**
+- **[SICAP Foliador](https://github.com/HermiloOrtega/SICAP-Folio-Manager)**
