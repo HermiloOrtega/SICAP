@@ -41,12 +41,14 @@ The system replaced an outdated manual and legacy solution with a fully integrat
 - 🧾 Session log (start/end times, fallback time calculation if crash occurs)
 
 ## ⚙️ Tech Stack
-- **Language:** C#
-- **Framework:** .NET Framework (WinForms)
-- **Database:** SQL Server
-- **Reporting:** Crystal Reports
-- **IDE:** Visual Studio
-- **Other:** SAP integration (via TXT), Windows Scheduled Tasks
+| Category                | Tools & Frameworks |
+|-------------------------|--------------------|
+| **Language** | ![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white&style=for-the-badge) |
+| **Framework** | ![.NET Framework](https://img.shields.io/badge/.NET%20Framework-512BD4?logo=.net&logoColor=white&style=for-the-badge) ![WinForms](https://img.shields.io/badge/WinForms-512BD4?logo=.net&logoColor=white&style=for-the-badge) |
+| **Databases & Storage** | ![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?logo=microsoft-sql-server&logoColor=white&style=for-the-badge) |
+| **Reporting** | ![Crystal Reports](https://img.shields.io/badge/Crystal%20Reports-000000?style=for-the-badge) |
+| **IDE** | ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91?logo=visualstudio&logoColor=white&style=for-the-badge) |
+| **Other** | ![SAP](https://img.shields.io/badge/SAP-000000?logo=sap&logoColor=white&style=for-the-badge) ![Windows Scheduled Tasks](https://img.shields.io/badge/Windows%20Scheduled%20Tasks-0078D4?logo=windows&logoColor=white&style=for-the-badge) |
 
 ## 🏗 Architecture & Design
 - Monolithic Windows desktop application
